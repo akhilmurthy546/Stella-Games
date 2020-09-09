@@ -1,0 +1,36 @@
+ .blurimg {
+	filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+/* Container holding the image and the text */
+.contain {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.jumbotron {
+	background-color: white;
+	color: black;
+}
+
+.sub {
+	position : absolute;
+	bottom   : 0;
+}
+
+.flash {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

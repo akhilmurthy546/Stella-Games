@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stella Games</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+	</head>
+	<body>
+		<nav class="navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="/" class="navbar-brand">Stella Games</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<% if (!currentUser) { %>
+							<li><a data-toggle="modal" data-target="#loginModal" href="">Login</a></li>
+							<li><a data-toggle="modal" data-target="#signupModal" href="">Signup</a></li>
+						<% } else { %>
+							<% if(currentUser.subscribed) { %>
+								<li><a data-toggle="modal" data-target="#editModal" href=""><%= currentUser.username %> (Premium)</a></li>
+							<% } else { %>
+								<li><a data-toggle="modal" data-target="#editModal" href=""><%= currentUser.username %></a></li>
+							<% } %>
+							<li><a href="/logout">Logout</a></li>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+		</nav>
